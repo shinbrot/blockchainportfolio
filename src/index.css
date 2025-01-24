@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.typing-animation {
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff }
+}
+
+.expertise-card {
+  @apply relative overflow-hidden transition-all duration-300 hover:scale-[1.02];
+}
+
+.expertise-item {
+  @apply relative p-3 transition-all duration-300 hover:bg-white/10 rounded-lg flex items-center gap-3;
+}
+
+.project-card {
+  @apply relative overflow-hidden transition-all duration-300;
+}
+
+.project-item {
+  @apply relative p-4 transition-all duration-300 hover:bg-white/10 rounded-lg cursor-pointer;
+}
