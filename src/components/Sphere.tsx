@@ -8,7 +8,7 @@ export default function Sphere() {
 
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(particlesCount * 3);
-    const radius = 7; // Increased radius
+    const radius = 4; // Increased radius
 
     for (let i = 0; i < particlesCount; i++) {
       const theta = Math.random() * Math.PI * 2;
